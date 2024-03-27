@@ -23,9 +23,9 @@ export default function SpellCheck() {
  }
  function findSuggestion()
  {
-    if(customDictionary.hasOwnProperty(ip))
+    if(customDictionary.hasOwnProperty(ip.toLowerCase()))
     {
-        setSuggestion(customDictionary[ip])
+        setSuggestion(customDictionary[ip.toLowerCase()])
     }
     else{
         setSuggestion("")
