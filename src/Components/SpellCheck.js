@@ -25,9 +25,12 @@ export default function SpellCheck() {
  {
     if(ip)
     {
-    if(customDictionary.hasOwnProperty(ip.toLowerCase()))
+        let words=ip.split(' ');
+        let lastWord=words[words.length-1].toLowerCase()
+        console.log(lastWord)
+    if(customDictionary.hasOwnProperty(lastWord))
     {
-        setSuggestion(customDictionary[ip.toLowerCase()])
+        setSuggestion(customDictionary[lastWord])
     }
     else{
         setSuggestion("")
