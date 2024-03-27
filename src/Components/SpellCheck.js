@@ -23,6 +23,8 @@ export default function SpellCheck() {
  }
  function findSuggestion()
  {
+    if(ip)
+    {
     if(customDictionary.hasOwnProperty(ip.toLowerCase()))
     {
         setSuggestion(customDictionary[ip.toLowerCase()])
@@ -30,6 +32,7 @@ export default function SpellCheck() {
     else{
         setSuggestion("")
     }
+}
  }
  useEffect(()=>{
 findSuggestion()
