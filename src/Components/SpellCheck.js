@@ -23,7 +23,7 @@ export default function SpellCheck() {
  }
  function findSuggestion()
  {
-    if(ip)
+    if(ip )
     {
         let words=ip.split(' ');
         let lastWord=words[words.length-1].toLowerCase()
@@ -32,13 +32,19 @@ export default function SpellCheck() {
     {
         setSuggestion(customDictionary[lastWord])
     }
-    else{
-        setSuggestion("")
-    }
+    // else{
+    //     setSuggestion("")
+    // }
 }
  }
  useEffect(()=>{
+    if(ip)
+    {
 findSuggestion()
+    }
+    else{
+        setSuggestion("")
+    }
  },[ip])
     return (
     <div className='container'>
