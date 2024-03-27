@@ -38,7 +38,8 @@ findSuggestion()
     <div className='container'>
    <h1>Spell Check and Auto-Correction</h1>
    <textarea rows={5} cols={40} placeholder='Enter text...' value={ip} onChange={handleChange}></textarea>
-   {suggest &&<p>Did you mean: <b>{suggest}</b>?</p>}
+   {suggest &&<p>Did you mean: <strong>{suggest}</strong>?</p>}
+  
     </div>
   )
 }
